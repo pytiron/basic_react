@@ -117,3 +117,4 @@ yarn-error.log*
 # custom ignoreing files
 
 venv/
+api_key.js

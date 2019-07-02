@@ -4,17 +4,18 @@ export default class SearchBar extends Component{
     constructor(props){
         super(props);
         this.state = {
-            keyword : ''
+            term : ''
         }
     }
     render() {
         return (
-            <div className="form-group row mt-3">
+            <div className="col-12 row mt-3 mb-3">
                 <input className="form-control col-11"
                        type="text" placeholder="search"
                        aria-label="Search"
                        onChange={event => this.setState({keyword: event.target.value})}
                        value = {this.state.keyword}/>
+
                 <input type="submit" className="col-1 form-control" value="search"/>
             </div>
         );
