@@ -10,9 +10,9 @@ export default ({video}) => {
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
-                        <h5 className="card-title">{video.snippet.title}</h5>
-                        <p className="card-text">video exp</p>
-                        <p className="card-text"><small className="text-muted">Last Updated 3 mins ago</small></p>
+                        <h5 className="card-title">{video.snippet.channelTitle}</h5>
+                        <p className="card-text">{video.snippet.title}</p>
+                        <p className="card-text"><small className="text-muted">{video.snippet.publishedAt}</small></p>
                     </div>
                 </div>
             </div>

@@ -13,7 +13,7 @@ export default class SearchBar extends Component{
                 <input className="form-control col-11"
                        type="text" placeholder="search"
                        aria-label="Search"
-                       onChange={event => this.setState({keyword: event.target.value})}
+                       onChange={event => this.props.onSearchVideo(event.target.value)}
                        value = {this.state.keyword}/>
 
                 <input type="submit" className="col-1 form-control" value="search"/>
