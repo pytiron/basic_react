@@ -24,15 +24,19 @@ class App extends Component{
                     <VideoDetail video={this.state.video}/>
                     <VideoList
                         videos={this.state.videos}
+                        onChangeVideo={ (video) => this.onChangeVideo(video)}
                     />
                 </div>
             </div>
         );
     }
 
+    onChangeVideo(video){
+        this.setState({video:video});
+    }
+
     onSearchVideos(term){
         youtube({key: apiKey, term},videos=>{
-            console.log('init videos',videos);
             this.setState({
                 videos: videos,
                 video : videos[0]

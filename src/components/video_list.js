@@ -2,11 +2,12 @@ import React from 'react';
 
 import VideoItem from './video_item';
 
-export default ({videos}) => {
+export default ({onChangeVideo, videos}) => {
     const videoItem = videos.map( video => {
         return (
             <VideoItem
                 key={video.etag}
+                onChangeVideo={(video) => onChangeVideo(video)}
                 video={video}
             />
         )

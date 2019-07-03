@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default ({video}) => {
+export default ({onChangeVideo, video}) => {
     const imgUrl = video.snippet.thumbnails.default.url;
+
     return (
-        <li className="list-group-item card">
+        <li onClick={() => onChangeVideo(video)}
+            className="list-group-item card list-item">
             <div className="row no-gutters">
                 <div className="col-md-4">
                     <img className="card-img" src={imgUrl} alt=""/>
