@@ -6,7 +6,7 @@ import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
 
-export default class App extends Component{
+class App extends Component{
     constructor(props){
         super(props);
         this.state = {
@@ -15,6 +15,7 @@ export default class App extends Component{
         };
         this.onSearchVideos('아이패드 미니5');
     }
+
     render() {
         return(
             <div className="container">
@@ -31,6 +32,7 @@ export default class App extends Component{
 
     onSearchVideos(term){
         youtube({key: apiKey, term},videos=>{
+            console.log('init videos',videos);
             this.setState({
                 videos: videos,
                 video : videos[0]
@@ -38,3 +40,5 @@ export default class App extends Component{
         });
     }
 }
+
+export default App;
